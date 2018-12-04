@@ -1,0 +1,18 @@
+
+<!-- INCUDE PARTIAL HERE -->
+<% include ../partials/_header %>
+
+<body>
+    <!-- Add your EJS code here -->
+    <ul>
+        <% for(var el in urls) { %>
+            <li><%= urls[el] %> <%= el %></li>
+        <% }; %>
+    </ul>
+
+
+    <a href="#">Shorten New Url</a>
+</body>
+</html>
+
+
