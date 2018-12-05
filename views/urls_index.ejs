@@ -1,4 +1,3 @@
-
 <!-- INCUDE PARTIAL HERE -->
 <% include ../partials/_header %>
 
@@ -11,9 +10,12 @@
             <li style="display:block">
               <p style="margin-bottom:0;margin-top:10; display:inline-block;">
                <%= shortUrl %> ⟶ <a href="<%= urls[shortUrl] %>"> <%= urls[shortUrl]  %> </a> </p>
-              <form> method="POST" action="./urls/<%= shortUrl %>/delete">
-                <button type="submit">Delete</button>
-              </form>
+                <form style="display:inline-block" action="/urls/<%= shortUrl %>">
+                    <button type="submit">Edit</button>
+                </form>
+                <form style="display:inline-block" method="POST" action="./urls/<%= shortUrl %>/delete">
+                    <button type="submit">Delete</button>
+                </form>
             </li>
         <% }; %>
     </ul>
