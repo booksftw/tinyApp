@@ -4,9 +4,17 @@
 
 <body>
     <!-- Add your EJS code here -->
+    <h4>URL Index</h4>
     <ul>
-        <% for(var el in urls) { %>
-            <li><%= urls[el] %> <%= el %></li>
+        <% for(var shortUrl in urls) { %>
+
+            <li style="display:block">
+              <p style="margin-bottom:0;margin-top:10; display:inline-block;">
+               <%= shortUrl %> ⟶ <a href="<%= urls[shortUrl] %>"> <%= urls[shortUrl]  %> </a> </p>
+              <form> method="POST" action="./urls/<%= shortUrl %>/delete">
+                <button type="submit">Delete</button>
+              </form>
+            </li>
         <% }; %>
     </ul>
 
