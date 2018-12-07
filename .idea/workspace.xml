@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3316fb4d-7f29-4971-83c8-b87b7adc44c9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/express_server.js" beforeDir="false" afterPath="$PROJECT_DIR$/express_server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partials/_header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/partials/_header.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/urls_index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/urls_index.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/urls_login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/urls_login.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/urls_show.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/urls_show.ejs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,11 +16,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/express_server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+            <state relative-caret-position="5016">
+              <caret line="221" column="12" selection-start-line="221" selection-start-column="4" selection-end-line="221" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/urls_index.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="10" column="87" selection-start-line="10" selection-start-column="87" selection-end-line="10" selection-end-column="87" />
             </state>
           </provider>
         </entry>
@@ -60,6 +65,7 @@
       <find>user_id</find>
       <find>login</find>
       <find>logout</find>
+      <find>console.</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -72,11 +78,11 @@
         <option value="$PROJECT_DIR$/views/urls_register.ejs" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.js" />
         <option value="$PROJECT_DIR$/views/urls_new.ejs" />
-        <option value="$PROJECT_DIR$/views/urls_index.ejs" />
         <option value="$PROJECT_DIR$/views/urls_show.ejs" />
         <option value="$PROJECT_DIR$/partials/_header.ejs" />
         <option value="$PROJECT_DIR$/views/urls_login.ejs" />
         <option value="$PROJECT_DIR$/express_server.js" />
+        <option value="$PROJECT_DIR$/views/urls_index.ejs" />
       </list>
     </option>
   </component>
@@ -174,18 +180,18 @@
       <updated>1544042419766</updated>
       <workItem from="1544042422868" duration="509000" />
       <workItem from="1544043130049" duration="6814000" />
-      <workItem from="1544124650889" duration="28648000" />
+      <workItem from="1544124650889" duration="28882000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35971000" />
+    <option name="totallyTimeSpent" value="36205000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.10711769" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10711769" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -208,54 +214,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/express_server.js</url>
-          <line>148</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/express_server.js</url>
-          <line>200</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/express_server.js</url>
-          <line>152</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/express_server.js</url>
-          <line>183</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/express_server.js</url>
-          <line>52</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/express_server.js</url>
-          <line>98</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/express_server.js</url>
-          <line>95</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -302,13 +260,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/urls_index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/urls_register.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -339,8 +290,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/express_server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+        <state relative-caret-position="5016">
+          <caret line="221" column="12" selection-start-line="221" selection-start-column="4" selection-end-line="221" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/urls_index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="87" selection-start-line="10" selection-start-column="87" selection-end-line="10" selection-end-column="87" />
         </state>
       </provider>
     </entry>
