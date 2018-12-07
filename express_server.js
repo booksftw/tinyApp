@@ -14,6 +14,7 @@ app.use(cookieSession({
 }));
 app.set("view engine", "ejs");
 
+// Default accounts & urls
 var urlDatabase = {
 	"b2xVn2": {
 		longUrl: "http://www.lighthouselabs.ca",
@@ -24,7 +25,6 @@ var urlDatabase = {
 		user_id: 'userRandomID',
 	}
 };
-
 const users = {
 	"userRandomID": {
 		id: "userRandomID",
@@ -67,8 +67,6 @@ function getUserObj(email){
 	for(let x in users){
 		const existingEmail = users[x].email;
 		if (existingEmail === email) {
-			console.log('found a match');
-			console.log(userObj);
 			userObj = users[x];
 		}
 	}
@@ -94,8 +92,8 @@ app.post("/login", (req, res)  => {
 });
 
 app.get('/logout', ( req, res ) => {
-	res.clearCookie('session')
-	res.clearCookie('session.sig')
+	res.clearCookie('session');
+	res.clearCookie('session.sig');
 	res.session = null;
 	res.send('logged out');
 });
@@ -131,7 +129,6 @@ app.post('/register', (req, res) => {
 	const newEmail        = req.body.email;
 	const newPassword     = req.body.password;
 	const encryptPassword = bcrypt.hashSync(newPassword, 10);
-
 	let emailExists = getUserObj(newEmail);
 
 	if ( (newEmail.length <= 0 || newPassword.length <= 0) ){
@@ -165,7 +162,6 @@ app.post("/urls", (req, res) => {
 });
 
 app.get("/urls/new", (req, res) => {
-
 	let theUserId = req.session.user_id;
 
     if ( !(req.session.user_id == null) ) {
@@ -183,10 +179,9 @@ app.get("/urls/new", (req, res) => {
 
 app.get("/urls", (req, res) => {
 	let seshUserId = req.session.user_id;
+
 	if (!req.session.user_id){
-		console.log('req sesh not in');
 		seshUserId = null;
-		console.log(seshUserId)
 	}
 	let templateVars = {
 		urls: urlDatabase,
