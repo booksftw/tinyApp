@@ -2,23 +2,14 @@
 <html lang="en">
 <head>
   <title>TinyApp</title>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
 </head>
 
-<h1>I'm A HEADER</h1>
-<!--<p>Hello <%= username %> </p>-->
-<!-- If user not logged in -->
+<div style="float:right; margin-right:100px">
+  <a href="/login">Login</a>
+  <a href="/logout">Logout</a>
+</div>
 
-<!-- else logged in. Show logout button and username -->
 
-<% if(username){ %>
-  <h1>IS LOGGED IN</h1>
-  <form action="/logout" method="POST">
-    <button type="submit">Logout</button>
-  </form>
-<% } else{ %>
-  <p>NOT LOGGED IN</p>
-  <form action="/login" method="POST">
-    <input type="text" name="username" id="username">
-    <button type="submit">login</button>
-  </form>
-<% } %>
