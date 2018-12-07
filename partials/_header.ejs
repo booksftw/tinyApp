@@ -8,8 +8,12 @@
 </head>
 
 <div style="float:right; margin-right:100px">
-  <a href="/login">Login</a>
-  <a href="/logout">Logout</a>
+  <% if (username) { %>
+    <h2>You're Logged In</h2>
+    <a href="/logout">Logout</a>
+  <% } else { %>
+    <p>You're Not Logged In</p>
+    <a href="/login">Login</a>
+  <% } %>%>
 </div>
-
 
