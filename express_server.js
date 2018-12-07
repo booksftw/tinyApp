@@ -10,9 +10,24 @@ app.use(bodyParser.urlencoded({extended: true}) );
 app.use(cookieParser());
 app.set("view engine", "ejs");
 
+// "user_id": {
+// 	'userRandomId': ['shortUrl1, shortUrl2],
+// 		'userRandomId2': ['shortUrl1'],
+// }
+
+//
+// @@@@@@@@@@@@@@@@@@@@@ JUST UPDATED urlDatabase.longURL ad urlDAtabase.user_id
+//
 var urlDatabase = {
-	"b2xVn2": "http://www.lighthouselabs.ca",
-	"9sm5xK": "http://www.google.com"
+	"b2xVn2": {
+		longUrl: "http://www.lighthouselabs.ca",
+		user_id: 'test',
+	},
+	"9sm5xK": {
+		longUrl: "http://www.google.com",
+		user_id: 'userRandomID',
+	}
+
 };
 
 const users = {
@@ -25,7 +40,12 @@ const users = {
 		id: "user2RandomID",
 		email: "user2@example.com",
 		password: "dishwasher-funk"
-	}
+	},
+	"test": {
+		id: "test",
+		email: "test@test.com",
+		password: "test"
+	},
 };
 
 function generateRandomString() {
@@ -41,7 +61,7 @@ app.get('/login', (req, res) => {
 });
 
 function getUserObj(email){
-	let userObj;
+	let userObj = null;
 	for(let x in users){
 		const existingEmail = users[x].email;
 		if (existingEmail == email) {
@@ -57,22 +77,19 @@ app.post("/login", (req, res)  => {
     console.log(req.body);
     const username = req.body.email;
     const password = req.body.password;
-    const userExists = checkIfUserExists(username);
-    if (!userExists) {
-    	res.status(403).send('Email cannot be found');
-	}
 	const userObj = getUserObj(username);
+
+    if (!userObj) {
+    	return res.status(403).send('Email cannot be found');
+	}
 
     if (userObj.password == password) {
     	// set user_id cookie with the matching user's random id and redirect /
 		res.cookie('user_id',userObj.id);
-		res.redirect('/')
+		return res.redirect('/')
 	} else {
-    	res.status(403).send("Password doesn't match");
+    	return res.status(403).send("Password doesn't match");
 	}
-
-	res.cookie('user_id',  username_id);
-	res.redirect('/urls')
 });
 
 app.get('/logout', ( req, res ) => {
@@ -115,24 +132,13 @@ app.get('/register', ( req , res ) => {
 // 		email: "user2@example.com",
 // 		password: "dishwasher-funk"
 // }
-function checkIfUserExists(newEmail) {
-	let emailExists = false;
-	for(let x in users){
-		console.log(users[x].email);
-		const existingEmail = users[x].email;
-		if (existingEmail == newEmail) {
-			console.log('Email Exists');
-			emailExists = true;
-		}
-	}
-	return emailExists
-}
+
 
 app.post('/register', (req, res) => {
 	const userRandomId = generateRandomString();
 	const newEmail        = req.body.email;
 	const newPassword     = req.body.password;
-	let emailExists = checkIfUserExists(newEmail);
+	let emailExists = getUserObj(newEmail);
 
 	if ( (newEmail.length <= 0 || newPassword.length <= 0) ){
 		console.log('status 400 send');
@@ -152,6 +158,19 @@ app.post('/register', (req, res) => {
 	// console.log('Registered User', users);
 });
 
+// var urlDatabase = {
+// 	"b2xVn2": {
+// 		longUrl: "http://www.lighthouselabs.ca",
+// 		user_id: 'test',
+// 	},
+// 	"9sm5xK": {
+// 		longUrl: "http://www.google.com",
+// 		user_id: 'userRandomID',
+// 	}
+//
+// };
+
+
 app.get("/urls", (req, res) => {
 	let templateVars = {
 	  urls: urlDatabase,
@@ -170,7 +189,19 @@ app.post("/urls", (req, res) => {
 });
 
 app.get("/urls/new", (req, res) => {
-    const templateVars = {username: req.cookies.user_id}
+	console.log(req.cookies.user_id);
+	let isAuthenticated = null;
+
+    if ( !(req.cookies.user_id == null) ) {
+    	isAuthenticated = req.cookies.user_id; // Read the cookie
+	}  else {
+    	isAuthenticated = false;
+    	return res.redirect('/login');
+	}
+
+	const templateVars = {username: req.cookies.user_id, isAuthenticated: isAuthenticated};
+	console.log(isAuthenticated, 'isAuthenticated');
+
 	generateRandomString();
 	res.render("urls_new", templateVars);
 });

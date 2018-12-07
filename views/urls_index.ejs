@@ -9,11 +9,11 @@
 
             <li style="display:block">
               <p style="margin-bottom:0;margin-top:10; display:inline-block;">
-               <%= shortUrl %> ⟶ <a href="<%= urls[shortUrl] %>"> <%= urls[shortUrl]  %> </a> </p>
+               <%= shortUrl %> ⟶ <a href="<%= urls[shortUrl].longUrl %>"> <%= urls[shortUrl].longUrl  %> </a> </p>
                 <form style="display:inline-block" action="/urls/<%= shortUrl %>">
                     <button class="btn btn-primary m-1" type="submit">Edit</button>
                 </form>
-                <form style="display:inline-block" method="POST" action="./urls/<%= shortUrl %>/delete">
+                <form style="display:inline-block" method="POST" action="/urls/<%= shortUrl %>/delete">
                     <button class="btn btn-danger m-1" type="submit">Delete</button>
                 </form>
             </li>
