@@ -99,7 +99,8 @@ app.post("/login", (req, res)  => {
     // check encrypt password by encrypting the plain text
     if (passwordMatchesEncryption) {
     	// set user_id cookie with the matching user's random id and redirect /
-		res.cookie('user_id',userObj.id);
+		// res.cookie('user_id',userObj.id);
+		req.session.user_id = userObj.id;
 		return res.redirect('/')
 	} else {
     	return res.status(403).send("Password doesn't match");
@@ -191,13 +192,14 @@ app.post('/register', (req, res) => {
 // };
 app.post("/urls", (req, res) => {
 	var formLongSubmission = req.body.longURL;
-	var shortUrl           = req.session.user_id;
+	var shortUrl           = generateRandomString();
+	var userId             = req.session.user_id;
 	urlDatabase[shortUrl] = {
 		longUrl: formLongSubmission,
-		user_id: shortUrl
-	}
+		user_id: userId
+	};
 	// urlDatabase[shortUrl].user_id = shortUrl;
-	console.log(urlDatabase, '<<<<<< URL DATABASE')
+	console.log(urlDatabase, '<<<<<< URL DATABASE');
 
 	let templateVars = { urls: urlDatabase, username: req.session.user_id };
 	res.render("urls_index", templateVars);
