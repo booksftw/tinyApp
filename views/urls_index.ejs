@@ -2,26 +2,45 @@
 <% include ../partials/_header %>
 
 <body>
-    <!-- Add your EJS code here -->
+    <!-- Add your EJS code here
+    var urlDatabase = {
+        "b2xVn2": {
+        longUrl: "http://www.lighthouselabs.ca",
+        user_id: 'test',
+        },
+        "9sm5xK": {
+        longUrl: "http://www.google.com",
+        user_id: 'userRandomID',
+        }
+    };
+    -->
     <h4>URL Index</h4>
     <ul>
         <% for(var shortUrl in urls) { %>
+        <!-- loop only the posts that match this user id -->
 
-            <li style="display:block">
-              <p style="margin-bottom:0;margin-top:10; display:inline-block;">
-               <%= shortUrl %> ⟶ <a href="<%= urls[shortUrl].longUrl %>"> <%= urls[shortUrl].longUrl  %> </a> </p>
-                <form style="display:inline-block" action="/urls/<%= shortUrl %>">
-                    <button class="btn btn-primary m-1" type="submit">Edit</button>
-                </form>
-                <form style="display:inline-block" method="POST" action="/urls/<%= shortUrl %>/delete">
-                    <button class="btn btn-danger m-1" type="submit">Delete</button>
-                </form>
-            </li>
-        <% }; %>
+
+            <% if ( urls[shortUrl].user_id  === username ) { %>
+                <li style="display:block">
+                  <p style="margin-bottom:0;margin-top:10; display:inline-block;">
+                   <%= shortUrl %> ⟶ <a href="<%= urls[shortUrl].longUrl %>"> <%= urls[shortUrl].longUrl  %> </a> </p>
+                    <form style="display:inline-block" action="/urls/<%= shortUrl %>">
+                        <button class="btn btn-primary m-1" type="submit">Edit</button>
+                    </form>
+                    <form style="display:inline-block" method="POST" action="/urls/<%= shortUrl %>/delete">
+                        <button class="btn btn-danger m-1" type="submit">Delete</button>
+                    </form>
+                </li>
+            <% } else { %>
+            <li><a href="<%= urls[shortUrl].longUrl %>"><%= shortUrl %></a> </li>
+            <% }} %>
     </ul>
 
+<!--
+    MAKE A ELSE STATEMENT TO SHOW SHORT URL TO LOGGED OUT USERS AND THEY CAN'T POST
+-->
 
-    <a style="margin-left: 39px" href="#">Shorten New Url</a>
+    <a style="margin-left: 39px" href="/urls/new">Shorten New Url</a>
 </body>
 </html>
 
