@@ -1,5 +1,6 @@
 var express = require("express");
-var cookieSession = require('cookie-session')
+var cookieSession = require('cookie-session');
+const methodOverride = require('method-override');
 
 var app = express();
 var PORT = 8080; // default port 8080
@@ -12,6 +13,7 @@ app.use(cookieSession({
 	keys: ['key1', 'key2'],
 	maxAge: 24 * 60 * 60 * 1000 // 24 hours
 }));
+app.use(methodOverride('_method'));
 app.set("view engine", "ejs");
 
 // Default accounts & urls
@@ -199,7 +201,18 @@ app.get("/urls/:id", (req, res) => {
 	res.render("urls_show", templateVars);
 });
 
+app.delete("/urls/:id", (req, res) => {
+	console.log(req.params, 'app.del<<<<<<<<');
+	delete urlDatabase[req.params.id];
+	res.redirect('/urls');
+});
+
+// app.put('/urls/:id', (req, res) => {
+// 	console.log(req.params, 'put<<<<<<<<');
+// });
+
 app.post("/urls/:id", (req, res) => {
+	console.log(req.params, '<<<<<<<<');
   let newLongUrl = req.body.updateLongUrl;
   urlDatabase[req.params.id].longUrl = newLongUrl;
   res.redirect('/urls');

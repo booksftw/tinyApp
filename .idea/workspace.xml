@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3316fb4d-7f29-4971-83c8-b87b7adc44c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/express_server.js" beforeDir="false" afterPath="$PROJECT_DIR$/express_server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/urls_index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/urls_index.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/urls_show.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/urls_show.ejs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,20 +19,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/express_server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+            <state relative-caret-position="322">
+              <caret line="209" selection-start-line="209" selection-start-column="3" selection-end-line="211" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/urls_index.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="10" column="88" selection-start-line="10" selection-start-column="88" selection-end-line="10" selection-end-column="88" />
+            <state relative-caret-position="285">
+              <caret line="18" column="67" selection-start-line="18" selection-end-line="19" />
+              <folding>
+                <element signature="n#style#0;n#form#1;n#li#0;n#ul#0;n#body#0;n#!!top" expanded="true" />
+                <marker date="1544316477467" expanded="false" signature="700:945" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/urls_show.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -63,13 +75,15 @@
       <find>cookies</find>
       <find>cookie</find>
       <find>.cookie</find>
-      <find>urls_show</find>
       <find>bcrypt</find>
       <find>/urls</find>
       <find>user_id</find>
       <find>login</find>
       <find>logout</find>
       <find>console.</find>
+      <find>urls_show</find>
+      <find>urlsForUs</find>
+      <find>getUser</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -82,12 +96,12 @@
         <option value="$PROJECT_DIR$/views/urls_register.ejs" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.js" />
         <option value="$PROJECT_DIR$/views/urls_new.ejs" />
-        <option value="$PROJECT_DIR$/views/urls_show.ejs" />
         <option value="$PROJECT_DIR$/partials/_header.ejs" />
         <option value="$PROJECT_DIR$/views/urls_login.ejs" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/express_server.js" />
         <option value="$PROJECT_DIR$/views/urls_index.ejs" />
+        <option value="$PROJECT_DIR$/views/urls_show.ejs" />
+        <option value="$PROJECT_DIR$/express_server.js" />
       </list>
     </option>
   </component>
@@ -98,8 +112,9 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="562" />
     <option name="y" value="27" />
-    <option name="width" value="937" />
+    <option name="width" value="878" />
     <option name="height" value="873" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -153,7 +168,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RunDashboard">
@@ -167,6 +182,24 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="Node.js.express_server.js">
+    <configuration name="urls_index.ejs" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/tinyApp/views/urls_index.ejs" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="express_server.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/express_server.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.urls_index.ejs" />
+      <item itemvalue="Node.js.express_server.js" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.express_server.js" />
+        <item itemvalue="JavaScript Debug.urls_index.ejs" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -182,32 +215,32 @@
       <workItem from="1544043130049" duration="6814000" />
       <workItem from="1544124650889" duration="29797000" />
       <workItem from="1544238011280" duration="598000" />
-      <workItem from="1544238691955" duration="191000" />
+      <workItem from="1544238691955" duration="8056000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37909000" />
+    <option name="totallyTimeSpent" value="45774000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="937" height="873" extended-state="0" />
+    <frame x="562" y="27" width="878" height="873" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16593887" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16569428" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32947233" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4118404" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.24581724" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.33719432" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -216,6 +249,24 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/express_server.js</url>
+          <line>181</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/express_server.js</url>
+          <line>187</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -240,24 +291,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/urls_new.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/urls_register.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/urls_show.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -272,13 +309,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="43" selection-start-column="43" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/express_server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -299,10 +329,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/urls_new.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/urls_index.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="10" column="88" selection-start-line="10" selection-start-column="88" selection-end-line="10" selection-end-column="88" />
+        <state relative-caret-position="285">
+          <caret line="18" column="67" selection-start-line="18" selection-end-line="19" />
+          <folding>
+            <element signature="n#style#0;n#form#1;n#li#0;n#ul#0;n#body#0;n#!!top" expanded="true" />
+            <marker date="1544316477467" expanded="false" signature="700:945" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/urls_show.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/express_server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="209" selection-start-line="209" selection-start-column="3" selection-end-line="211" selection-end-column="6" />
         </state>
       </provider>
     </entry>

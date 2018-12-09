@@ -12,8 +12,12 @@
                     <form style="display:inline-block" action="/urls/<%= shortUrl %>">
                         <button class="btn btn-primary m-1" type="submit">Edit</button>
                     </form>
-                    <form style="display:inline-block" method="POST" action="/urls/<%= shortUrl %>/delete">
-                        <button class="btn btn-danger m-1" type="submit">Delete</button>
+                    <!--<form style="display:inline-block" method="POST" action="/urls/<%= shortUrl %>/delete">-->
+                        <!--<button class="btn btn-danger m-1" type="submit">Delete</button>-->
+                    <!--</form>-->
+                    <!--<form style="display:inline-block" method="POST" action="/urls/<%= shortUrl %>/delete">-->
+                    <form style="display:inline-block" method="POST" action="/urls/<%= shortUrl %>?_method=DELETE">
+                    <button class="btn btn-danger m-1" type="submit">Delete</button>
                     </form>
                 </li>
             <% } else { %>

@@ -5,7 +5,8 @@
 
   <h3>ShortURL: <%= shortURL %></h3>
 
-  <form action="/urls/<%=shortURL%> " method="POST">
+  <form action="/urls/<%=shortURL%>?_method=PUT " method="POST">
+    <!--<form action="/urls/<%=shortURL%> " method="POST">-->
     <input type="text" name="updateLongUrl" id="updateLongUrl" placeholder="<%= longURL%>">
     <button type="submit" value="submit">Update</button>
   </form>
