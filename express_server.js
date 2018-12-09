@@ -207,9 +207,28 @@ app.delete("/urls/:id", (req, res) => {
 	res.redirect('/urls');
 });
 
-// app.put('/urls/:id', (req, res) => {
-// 	console.log(req.params, 'put<<<<<<<<');
-// });
+// var urlDatabase = {
+// 	"b2xVn2": {
+// 		longUrl: "http://www.lighthouselabs.ca",
+// 		user_id: 'test',
+// 	},
+// 	"9sm5xK": {
+// 		longUrl: "http://www.google.com",
+// 		user_id: 'userRandomID',
+// 	}
+// };
+
+app.put('/urls/:id', (req, res) => {
+	const newUrl = req.body.updateLongUrl;
+	const shortUrl = req.params.id;
+	for(let shortUrlKey in urlDatabase) {
+		if (shortUrlKey === shortUrl) {
+			// update this long url
+			urlDatabase[shortUrlKey].longUrl = newUrl;
+		}
+	}
+	res.redirect('/urls');
+});
 
 app.post("/urls/:id", (req, res) => {
 	console.log(req.params, '<<<<<<<<');
