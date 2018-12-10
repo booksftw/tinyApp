@@ -42,21 +42,21 @@ var urlDatabase = {
 			'userId': [500,300,700],
 			'userId2': [600]
 		},
-		getTotalClickCount: function() {
-			let totalClicks = 0;
-			for(let propKey in this.clickTimestamp) {
-				totalClicks += this.clickTimestamp[propKey].length;
-			}
-			return totalClicks
-		},
-		getUniqueVisitorCount: function () {
-			let count = 0;
-
-			for(let propKey in this.clickTimestamp) {
-				count ++;
-			}
-			return count;
-		}
+		// getTotalClickCount: function() {
+		// 	let totalClicks = 0;
+		// 	for(let propKey in this.clickTimestamp) {
+		// 		totalClicks += this.clickTimestamp[propKey].length;
+		// 	}
+		// 	return totalClicks
+		// },
+		// getUniqueVisitorCount: function () {
+		// 	let count = 0;
+		//
+		// 	for(let propKey in this.clickTimestamp) {
+		// 		count ++;
+		// 	}
+		// 	return count;
+		// }
 	}
 };
 
@@ -156,7 +156,8 @@ function updateTrackingData(shortUrl, visitorId) {
 	// Initialize and add timestamps.
 	if ( visitorId ) {
 		//Update time stamp
-		if ( typeof(urlObj.clickTimestamp) === 'undefined' ) {
+		// if ( typeof(urlObj.clickTimestamp) === 'undefined' ) {
+		if ( !urlObj.hasOwnProperty('clickTimestamp') ) {
 			console.log('intializing');
 			// initialize the array and add first element
 			urlObj.clickTimestamp = {
@@ -183,7 +184,29 @@ function updateTrackingData(shortUrl, visitorId) {
 			// push
 			console.log('pushing' , timestamp);
 			// console.log(urlObj.clickTimestamp[visitorId]);
-			urlObj.clickTimestamp[visitorId].push(timestamp);
+			if (urlObj.clickTimestamp.hasOwnProperty(visitorId)){
+				urlObj.clickTimestamp[visitorId].push(timestamp);
+			}  else {
+				// Hotfix for conflict
+				// Intialize if weird multiaccount thing happens
+				urlObj.clickTimestamp[visitorId] = [timestamp];
+				// Initialize methods to get data from urlObj
+				urlObj.getTotalClickCount = function(){
+					let totalClicks = 0;
+					for(let propKey in this.clickTimestamp) {
+						totalClicks += this.clickTimestamp[propKey].length;
+					}
+					return totalClicks
+				};
+				urlObj.getUniqueVisitorCount = function() {
+					let count = 0;
+					for(let propKey in this.clickTimestamp) {
+						count ++;
+					}
+					return count;
+				}
+			}
+
 		}
 	}
 	console.log(urlObj,'<<<<<<<<<<<<<<<<<url obj');
@@ -284,14 +307,44 @@ app.get("/urls", (req, res) => {
 
 app.get("/urls/:id", (req, res) => {
 	const shortUrl = req.params.id;
-	const totalClickCount =  ;
-	const uniqueVisitorCount;
-	const timePersonVisitTimeTale;
+	console.log(shortUrl, 'short url');
+	let totalClickCount = 0;
+	let uniqueVisitorCount = 0;
+	console.log(urlDatabase);
+
+	if (urlDatabase[shortUrl].hasOwnProperty('getTotalClickCount') ){
+		console.log('IT HAS THE FUNCTION METHOD Click count')
+		totalClickCount = urlDatabase[shortUrl].getTotalClickCount();
+	}  else {
+		console.log(' IT DOESN"T HAE IT');
+	}
+
+	if (urlDatabase[shortUrl].hasOwnProperty('getTotalClickCount') ){
+		console.log('IT HAS THE FUNCTION METHOD Visitor')
+		uniqueVisitorCount = urlDatabase[shortUrl].getUniqueVisitorCount();
+	}  else {
+		console.log(' IT DOESN"T HAE IT');
+	}
+	
+	// if (typeof(urlDatabase[shortUrl].getTotalClickCount === 'function')){
+	// 	console.log(typeof(urlDatabase[shortUrl].getTotalClickCount === 'function'))
+	// 	totalClickCount = urlDatabase[shortUrl].getTotalClickCount();
+	// }
+	//
+	// if (typeof(urlDatabase[shortUrl].getUniqueVisitorCount === 'function')){
+	// 	uniqueVisitorCount = urlDatabase[shortUrl].getUniqueVisitorCount();
+	// }
+
+
+	const timePersonVisitTimeTable = urlDatabase[shortUrl].clickTimestamp;
 
 	let templateVars = {
-		shortURL: req.params.id,
+		shortURL: shortUrl,
 		longURL: urlDatabase[req.params.id].longUrl,
-        username: req.session.user_id
+        username: req.session.user_id,
+		totalClicks: totalClickCount,
+		totalUniques: uniqueVisitorCount,
+		timeTable: timePersonVisitTimeTable,
 	};
 	res.render("urls_show", templateVars);
 });

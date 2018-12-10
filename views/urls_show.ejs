@@ -5,6 +5,11 @@
 
   <h3>ShortURL: <%= shortURL %></h3>
 
+  <p>total clicks: <%= totalClicks%></p>
+  <p>total unqiue: <%= totalUniques%></p>
+  <p>timeTable <%= timeTable%></p>
+
+
   <form action="/urls/<%=shortURL%>?_method=PUT " method="POST">
     <!--<form action="/urls/<%=shortURL%> " method="POST">-->
     <input type="text" name="updateLongUrl" id="updateLongUrl" placeholder="<%= longURL%>">
