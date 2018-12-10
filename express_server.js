@@ -16,6 +16,11 @@ app.use(cookieSession({
 app.use(methodOverride('_method'));
 app.set("view engine", "ejs");
 
+//
+// LEFT OFF: Included clickTimestamp property
+// Update this in /track
+// Use the clickTime steamp data to figgure out the other requirements
+
 // Default accounts & urls
 var urlDatabase = {
 	"b2xVn2": {
@@ -25,8 +30,36 @@ var urlDatabase = {
 	"9sm5xK": {
 		longUrl: "http://www.google.com",
 		user_id: 'userRandomID',
+	},
+	"daksjhdjkashdakjs": {
+		longUrl: "http://www.googlez.com",
+		user_id: 'user2RandomID',
+	},
+	"test9sm": {
+		longUrl: "http://www.stoichustle.com",
+		user_id: 'test',
+		clickTimestamp: {
+			'userId': [500,300,700],
+			'userId2': [600]
+		},
+		getTotalClickCount: function() {
+			let totalClicks = 0;
+			for(let propKey in this.clickTimestamp) {
+				totalClicks += this.clickTimestamp[propKey].length;
+			}
+			return totalClicks
+		},
+		getUniqueVisitorCount: function () {
+			let count = 0;
+
+			for(let propKey in this.clickTimestamp) {
+				count ++;
+			}
+			return count;
+		}
 	}
 };
+
 const users = {
 	"userRandomID": {
 		id: "userRandomID",
@@ -113,6 +146,63 @@ app.get("/urls.json", (req, res) => {
 	res.json(urlDatabase);
 });
 
+function updateTrackingData(shortUrl, visitorId) {
+	const urlObj = urlDatabase[shortUrl];
+	let date = new Date();
+	let timestamp = date.getTime();
+
+	if (shortUrl === null) return 0;
+
+	// Initialize and add timestamps.
+	if ( visitorId ) {
+		//Update time stamp
+		if ( typeof(urlObj.clickTimestamp) === 'undefined' ) {
+			console.log('intializing');
+			// initialize the array and add first element
+			urlObj.clickTimestamp = {
+				[visitorId]: [timestamp]
+			};
+
+			// Initialize methods to get data from urlObj
+			urlObj.getTotalClickCount = function(){
+				let totalClicks = 0;
+				for(let propKey in this.clickTimestamp) {
+					totalClicks += this.clickTimestamp[propKey].length;
+				}
+				return totalClicks
+			};
+			urlObj.getUniqueVisitorCount = function() {
+				let count = 0;
+				for(let propKey in this.clickTimestamp) {
+					count ++;
+				}
+				return count;
+			}
+
+		}  else {
+			// push
+			console.log('pushing' , timestamp);
+			// console.log(urlObj.clickTimestamp[visitorId]);
+			urlObj.clickTimestamp[visitorId].push(timestamp);
+		}
+	}
+	console.log(urlObj,'<<<<<<<<<<<<<<<<<url obj');
+	console.log(urlDatabase);
+	console.log('')
+	console.log(urlDatabase[shortUrl].getTotalClickCount() , ' TOTAL CLICK COUNT');
+	console.log(urlDatabase[shortUrl].getUniqueVisitorCount() , ' UNIQUE VISITOR COUNT');
+
+}
+
+app.get('/track', (req, res) => {
+	let visitorId = req.session.user_id? req.session.user_id : null;
+	// let longUrl = req.query.longUrl;
+	let shortUrl = req.query.shortUrl? req.query.shortUrl : null;
+	updateTrackingData(shortUrl, visitorId);
+
+	res.send('Track catched, redirecting to longUrl...');
+});
+
 app.get("/hello", (req, res) => {
 	let templateVars = { greeting: "Hello World!" };
 	res.render("hello_world", templateVars);
@@ -193,6 +283,11 @@ app.get("/urls", (req, res) => {
 });
 
 app.get("/urls/:id", (req, res) => {
+	const shortUrl = req.params.id;
+	const totalClickCount =  ;
+	const uniqueVisitorCount;
+	const timePersonVisitTimeTale;
+
 	let templateVars = {
 		shortURL: req.params.id,
 		longURL: urlDatabase[req.params.id].longUrl,

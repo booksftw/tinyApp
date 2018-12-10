@@ -18,13 +18,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/express_server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="214" column="6" lean-forward="true" selection-start-line="214" selection-start-column="6" selection-end-line="214" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/urls_index.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+            <state relative-caret-position="458">
+              <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
               <folding>
-                <marker date="1544396960957" expanded="true" signature="700:720" ph="..." />
+                <marker date="1544420923485" expanded="true" signature="837:857" ph="..." />
               </folding>
             </state>
           </provider>
@@ -34,10 +43,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>/urls/:id&quot;</find>
-      <find>urls_in</find>
-      <find>res.cook</find>
-      <find>templateVar</find>
       <find>code</find>
       <find>404</find>
       <find>action</find>
@@ -53,17 +58,21 @@
       <find>username</find>
       <find>urls_index</find>
       <find>cookies</find>
-      <find>cookie</find>
       <find>.cookie</find>
       <find>bcrypt</find>
       <find>/urls</find>
-      <find>user_id</find>
       <find>login</find>
       <find>logout</find>
       <find>console.</find>
       <find>urls_show</find>
       <find>urlsForUs</find>
       <find>getUser</find>
+      <find>cookie</find>
+      <find>user_id</find>
+      <find>/track</find>
+      <find>params</find>
+      <find>app.get('</find>
+      <find>cookieSession</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -93,9 +102,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="1440" />
-    <option name="y" value="-154" />
-    <option name="width" value="1155" />
-    <option name="height" value="1040" />
+    <option name="y" value="-152" />
+    <option name="width" value="1487" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -148,7 +157,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RunDashboard">
@@ -201,26 +210,26 @@
       <workItem from="1544338502332" duration="30000" />
       <workItem from="1544338998501" duration="15000" />
       <workItem from="1544342146254" duration="37000" />
-      <workItem from="1544385151597" duration="1744000" />
+      <workItem from="1544385151597" duration="18437000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49916000" />
+    <option name="totallyTimeSpent" value="66609000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1440" y="-154" width="1155" height="1040" extended-state="0" />
+    <frame x="1440" y="-152" width="1487" height="1038" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.178515" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info id="Terminal" order="4" weight="0.31657848" />
+      <window_info active="true" id="Terminal" order="4" visible="true" weight="0.14324693" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32947233" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.41170213" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.51968503" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -237,11 +246,11 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info id="Terminal" order="4" visible="true" weight="0.31657848" />
+      <window_info active="true" id="Terminal" order="4" visible="true" weight="0.29188713" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32947233" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.41170213" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5212766" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -262,18 +271,44 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/express_server.js</url>
-          <line>197</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/express_server.js</url>
-          <line>194</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/express_server.js</url>
-          <line>220</line>
+          <line>310</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/express_server.js</url>
+          <line>196</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/express_server.js</url>
+          <line>24</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/express_server.js</url>
+          <line>203</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/express_server.js</url>
+          <line>184</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/express_server.js</url>
+          <line>148</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/express_server.js</url>
+          <line>218</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -298,20 +333,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="23" selection-start-column="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/urls_register.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/_header.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -353,19 +374,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="uml://JavaScript-modules-diagram//Users/nick/lighthouse/w2d2Plus/our_first_web_server/tinyApp/express_server.js">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/express_server.js</OriginalElement>
+          <nodes>
+            <node x="" y="">$PROJECT_DIR$/node_modules/bcrypt/bcrypt.js</node>
+            <node x="" y="">$PROJECT_DIR$/express_server.js#bcrypt#241;/Users/nick/lighthouse/w2d2Plus/our_first_web_server/tinyApp/express_server.js#bodyParser#198;/Users/nick/lighthouse/w2d2Plus/our_first_web_server/tinyApp/express_server.js#cookieSession#38;/Users/nick/lighthouse/w2d2Plus/our_first_web_server/tinyApp/express_server.js#express#4;/Users/nick/lighthouse/w2d2Plus/our_first_web_server/tinyApp/express_server.js#methodOverride#87;</node>
+            <node x="" y="">$PROJECT_DIR$/node_modules/method-override/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/node_modules/cookie-session/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/node_modules/body-parser/index.js</node>
+            <node x="" y="">express</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.7801556420233463" x="247.0" y="208.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/_header.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/urls_register.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/express_server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="54" column="31" lean-forward="true" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
+        <state relative-caret-position="173">
+          <caret line="214" column="6" lean-forward="true" selection-start-line="214" selection-start-column="6" selection-end-line="214" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/urls_index.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        <state relative-caret-position="458">
+          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
           <folding>
-            <marker date="1544396960957" expanded="true" signature="700:720" ph="..." />
+            <marker date="1544420923485" expanded="true" signature="837:857" ph="..." />
           </folding>
         </state>
       </provider>

@@ -9,6 +9,7 @@
                 <li style="display:block">
                   <p style="margin-bottom:0;margin-top:10; display:inline-block;">
                       <a href="<%= urls[shortUrl].longUrl %>"><%= shortUrl %> </a> ⟶ <a> <%= urls[shortUrl].longUrl  %> </a> </p>
+                      <!--<a href="<%= urls[shortUrl].longUrl %>"><%= shortUrl %> </a> ⟶ <a> <%= urls[shortUrl].longUrl  %> </a> </p>-->
                     <form style="display:inline-block" action="/urls/<%= shortUrl %>">
                         <button class="btn btn-primary m-1" type="submit">Edit</button>
                     </form>
@@ -17,8 +18,17 @@
                     </form>
                 </li>
             <% } else { %>
-            <li><a href="<%= urls[shortUrl].longUrl %>"><%= shortUrl %></a> </li>
-            <% }} %>
+                    <!--<li><a href="<%  urls[shortUrl].longUrl %>"><%= shortUrl %></a> </li>-->
+                    <li>
+                        <form action="/track/?" method="GET">
+                            <input type="hidden" name="shortUrl" value="<%= shortUrl %>">
+                            <input type="hidden" name="longUrl" value="<%= urls[shortUrl].longUrl %>>">
+                            <button class="btn btn-link" type="submit"><%= shortUrl%> </button>
+                            <!--<button type="submit"><a href="<%= urls[shortUrl].longUrl %>"><%= shortUrl %></a></button>-->
+                        </form>
+                    </li>
+
+        <% }} %>
     </ul>
 
     <a style="margin-left: 39px" href="/urls/new">Shorten New Url</a>
