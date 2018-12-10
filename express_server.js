@@ -38,10 +38,10 @@ var urlDatabase = {
 	"test9sm": {
 		longUrl: "http://www.stoichustle.com",
 		user_id: 'test',
-		clickTimestamp: {
-			'userId': [500,300,700],
-			'userId2': [600]
-		},
+		// clickTimestamp: {
+		// 	'userId': [500,300,700],
+		// 	'userId2': [600]
+		// },
 		// getTotalClickCount: function() {
 		// 	let totalClicks = 0;
 		// 	for(let propKey in this.clickTimestamp) {
@@ -219,10 +219,11 @@ function updateTrackingData(shortUrl, visitorId) {
 
 app.get('/track', (req, res) => {
 	let visitorId = req.session.user_id? req.session.user_id : null;
-	// let longUrl = req.query.longUrl;
+	let longUrl = req.query.longUrl;
 	let shortUrl = req.query.shortUrl? req.query.shortUrl : null;
 	updateTrackingData(shortUrl, visitorId);
 
+	res.redirect(longUrl);
 	res.send('Track catched, redirecting to longUrl...');
 });
 
