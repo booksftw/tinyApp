@@ -11,7 +11,7 @@
   <% if ( timeTable ) { %>
     <% Object.keys(timeTable).forEach(function(key){ %>
       <% timeTable[key].forEach(function(stamp){ %>
-        <p>User Id: <span class="text-info"><%=key %> </span>clicked <span class="text-info">http://<%= shortURL %>.com</span>  at this time: <span class="text-success"><%= stamp %></span> </p>
+        <p>User Id: <span class="text-info"><%=key %> </span>clicked <span class="text-info">shortly link <%= shortURL %></span>  at this time: <span class="text-success"><%= stamp %></span> </p>
       <% }); %>
     <% }); %>
   <% } %>
