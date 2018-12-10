@@ -325,16 +325,6 @@ app.get("/urls/:id", (req, res) => {
 	}  else {
 		console.log(' IT DOESN"T HAE IT');
 	}
-	
-	// if (typeof(urlDatabase[shortUrl].getTotalClickCount === 'function')){
-	// 	console.log(typeof(urlDatabase[shortUrl].getTotalClickCount === 'function'))
-	// 	totalClickCount = urlDatabase[shortUrl].getTotalClickCount();
-	// }
-	//
-	// if (typeof(urlDatabase[shortUrl].getUniqueVisitorCount === 'function')){
-	// 	uniqueVisitorCount = urlDatabase[shortUrl].getUniqueVisitorCount();
-	// }
-
 
 	const timePersonVisitTimeTable = urlDatabase[shortUrl].clickTimestamp;
 

@@ -7,8 +7,14 @@
 
   <p>total clicks: <%= totalClicks%></p>
   <p>total unqiue: <%= totalUniques%></p>
-  <p>timeTable <%= timeTable%></p>
-
+  <!-- Time table -->
+  <% if ( timeTable ) { %>
+    <% Object.keys(timeTable).forEach(function(key){ %>
+      <% timeTable[key].forEach(function(stamp){ %>
+        <p><%=key %> clicked link at this time: <%= stamp %> </p>
+      <% }); %>
+    <% }); %>
+  <% } %>
 
   <form action="/urls/<%=shortURL%>?_method=PUT " method="POST">
     <!--<form action="/urls/<%=shortURL%> " method="POST">-->
