@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3316fb4d-7f29-4971-83c8-b87b7adc44c9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/views/urls_show.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/urls_show.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -99,10 +99,10 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1440" />
-    <option name="y" value="-145" />
-    <option name="width" value="1212" />
-    <option name="height" value="1031" />
+    <option name="x" value="334" />
+    <option name="y" value="27" />
+    <option name="width" value="673" />
+    <option name="height" value="873" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -208,22 +208,21 @@
       <workItem from="1544338502332" duration="30000" />
       <workItem from="1544338998501" duration="15000" />
       <workItem from="1544342146254" duration="37000" />
-      <workItem from="1544385151597" duration="23856000" />
+      <workItem from="1544385151597" duration="24248000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72028000" />
+    <option name="totallyTimeSpent" value="72420000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1440" y="-145" width="1212" height="1031" extended-state="0" />
-    <editor active="true" />
+    <frame x="334" y="27" width="673" height="873" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.20235096" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info active="true" id="Terminal" order="4" visible="true" weight="0.30814442" />
+      <window_info active="true" id="Terminal" order="4" visible="true" weight="0.56288344" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32947233" />
